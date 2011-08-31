@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #3f4c6b;
+    overflow: hidden;
+}
+section {
+    z-index: 500;
+    width: 800px;
+    height: 600px;
+    border: solid 3px #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -400px;
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+
+    -webkit-transition:
+        left 0.3s ease-in-out,
+        -webkit-transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+
+    &.next {
+        left: 102%;
+        -webkit-transform: scale(0.7,0.7);
+    }
+    &.previous {
+        left: -2%;
+        -webkit-transform: scale(0.7,0.7);
+    }
+ }
