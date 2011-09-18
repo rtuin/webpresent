@@ -1,6 +1,6 @@
 // webpresent.js
-// (c) 2011 Richard Tuin
-// webpresent.js may be freely distributed under the *** license
+// 2011 Richard Tuin
+// webpresent.js may be freely distributed, altered, used and abused under the who-needs-a license
 (function($) {
     $(document).ready(function() {
         $('section:first-child').addClass('current');
@@ -14,6 +14,7 @@
     $(document).keydown(function (event) {
         switch (event.keyCode) {
             case 39: // next
+            case 34: // next
                 var current = $('section.current');
                 var items = current.find('.item.hidden');
                 if (items.length) {
@@ -26,6 +27,7 @@
                 current.addClass('previous').removeClass('current');
                 break;
             case 37: // previous
+            case 33: // previous
                 var current = $('section.current');
 
                 var items = current.find('.item:not(.hidden)');
@@ -40,4 +42,4 @@
                 break;
         }
     });
-})(jQuery)
+})(jQuery);

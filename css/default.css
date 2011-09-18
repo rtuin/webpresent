@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("bebasneue-webfont.eot");
+  src: url("bebasneue-webfont.eot?#iefix") format("embedded-opentype"), url("bebasneue-webfont.woff") format("woff"), url("bebasneue-webfont.ttf") format("truetype"), url("bebasneue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -12,7 +19,20 @@ body {
   overflow: hidden;
   font: 22px Helvetica, Arial, sans-serif; }
 
+h1 {
+  color: #333;
+  font: 46px BebasNeueRegular; }
+
+h2 {
+  color: #333;
+  font: 26px BebasNeueRegular; }
+
+p {
+  font-size: 26px; }
+
 section {
+  overflow: hidden;
+  display: table;
   z-index: 500;
   width: 760px;
   height: 600px;
@@ -23,43 +43,87 @@ section {
   top: 50%;
   left: 50%;
   margin: -300px 0 0 -380px;
-  background: -webkit-linear-gradient(top, white 0%, #cccccc 100%);
-  -webkit-transition: margin-left 0.3s ease-in-out,         -webkit-transform 0.3s ease-in-out,         opacity 0.3s ease-in-out; }
+  background-color: #eee;
+  background-image: linear-gradient(bottom, #cccccc 33%, white 67%);
+  background-image: -o-linear-gradient(bottom, #cccccc 33%, white 67%);
+  background-image: -moz-linear-gradient(bottom, #cccccc 33%, white 67%);
+  background-image: -webkit-linear-gradient(bottom, #cccccc 33%, white 67%);
+  background-image: -ms-linear-gradient(bottom, #cccccc 33%, white 67%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, #cccccc), color-stop(0.67, white));
+  -webkit-transition: margin-left 0.3s ease-in-out,         -webkit-transform 0.3s ease-in-out,         opacity 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out,         -moz-transform 0.3s ease-in-out,         opacity 0.3s ease-in-out; }
   section.next {
     margin-left: 320px;
-    -webkit-transform: scale(0.7, 0.7); }
+    -moz-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7); }
   section.previous {
-    margin-left: -1120px;
-    -webkit-transform: scale(0.7, 0.7); }
-  section li {
-    margin: 5px 0; }
+    margin-left: -1080px;
+    -moz-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7); }
 
 .item {
   -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
   /* Transitions */ }
   .item.hidden {
     opacity: 0; }
   .item.fadeleft {
-    -webkit-transition: opacity 0.3s ease-in, margin 0.3s ease-in; }
+    -webkit-transition: opacity 0.3s ease-in, margin 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in, margin 0.3s ease-in; }
     .item.fadeleft.hidden {
       margin-left: -100px; }
   .item.faderight {
     position: relative;
-    -webkit-transition: opacity 0.3s ease-in, right 0.3s ease-in; }
+    -webkit-transition: opacity 0.3s ease-in, right 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in, right 0.3s ease-in; }
     .item.faderight.hidden {
       right: -100px; }
   .item.fadetop {
-    -webkit-transition: opacity 0.3s ease-in, margin 0.3s ease-in; }
+    -webkit-transition: opacity 0.3s ease-in, margin 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in, margin 0.3s ease-in; }
     .item.fadetop.hidden {
       margin-top: -100px; }
   .item.fadebottom {
     position: relative;
-    -webkit-transition: opacity 0.3s ease-in, bottom 0.3s ease-in; }
+    -webkit-transition: opacity 0.3s ease-in, bottom 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in, bottom 0.3s ease-in; }
     .item.fadebottom.hidden {
       bottom: -100px; }
   .item.notrans {
-    -webkit-transition: none; }
+    -webkit-transition: none;
+    -moz-transition: none; }
   .item.custom {
-    -webkit-transition: -webkit-transform 0.3s ease-in; }
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    -moz-transition: -webkit-transform 0.3s ease-in; }
     .item.custom.hidden {
       -webkit-transform: scale(1.5); }
+
+.allcenter {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+.center {
+  text-align: center; }
+
+ul {
+  font-size: 26px; }
+  ul li {
+    margin: 8px 0; }
+
+.small {
+  font-size: 0.6em; }
+
+.smaller {
+  font-size: 0.8em; }
+
+.big {
+  font-size: 1.6em; }
+
+/* Put your own CSS code here */
