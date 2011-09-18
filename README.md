@@ -7,7 +7,8 @@ Use the arrow keys (left & right) to navigate.
 Also, this works with a wireless presenter tool (which uses page-up and page-down internally).
 
 ## Features
-Different type of transitions:
+Different type of transitions
+
 - Fade in (default)
 - Fade in from the left
 - Fade in from the right
