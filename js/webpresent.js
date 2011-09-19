@@ -31,7 +31,6 @@
                 break;
             case 3:
             {
-                console.log('??');
                 previous();
                 break;
             }
